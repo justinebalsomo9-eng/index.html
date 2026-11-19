@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Élane — considered clothing for everyday rituals." />
+    <title>Élane — Quietly Remarkable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gloock&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Client.css" />
+  </head>
+  <body>
+    <div class="announcement">Complimentary shipping on orders over $150</div>
+
+    <header class="header">
+      <div class="nav-shell">
+        <button class="icon-button mobile-only" id="menuButton" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><path d="M3 7h18M3 17h18" /></svg>
+        </button>
+
+        <a class="logo" href="#">ÉLANE</a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <button data-scroll-shop>New arrivals</button>
+          <button data-category-link="Dresses">Women</button>
+          <button data-category-link="Tailoring">Tailoring</button>
+          <a href="#story">Our story</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" id="searchButton" aria-label="Search">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-4-4" />
+            </svg>
+          </button>
+          <button class="icon-button desktop-heart" aria-label="Favorites">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.4 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"
+              />
+            </svg>
+          </button>
+          <button class="icon-button cart-button" id="cartButton" aria-label="Open cart">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 8h14l-1 13H6L5 8Z" />
+              <path d="M9 9V6a3 3 0 0 1 6 0v3" />
+            </svg>
+            <span class="cart-count hidden" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-panel hidden" id="searchPanel">
+        <div class="search-field">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-4-4" />
+          </svg>
+          <input id="searchInput" type="search" placeholder="Search the collection" />
+          <button class="icon-button" id="closeSearch" aria-label="Close search">
+            <svg viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow accent">Spring / Summer 2026</p>
+          <h1>Quietly <em>remarkable.</em></h1>
+          <p class="hero-description">
+            Considered clothing for everyday rituals. Designed in Copenhagen, made to live with you.
+          </p>
+          <button class="text-link" data-scroll-shop>
+            Shop the collection
+            <svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg>
+          </button>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1601762603339-fd61e28b698a?crop=entropy&cs=tinysrgb&fit=crop&h=1500&w=1300&q=90"
+            alt="Woman wearing a sculptural grey trench coat"
+          />
+        </div>
+      </section>
+
+      <section class="shop" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Curated essentials</p>
+            <h2>The new edit</h2>
+          </div>
+          <div class="filters" id="categoryFilters" aria-label="Product categories"></div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state hidden" id="emptyState">
+          <h3>No pieces found.</h3>
+          <button id="clearSearch">Clear search</button>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1715559522419-db7face19c1c?crop=entropy&cs=tinysrgb&fit=crop&h=1200&w=1000&q=85"
+            alt="Two women wearing neutral tailored pieces"
+          />
+        </div>
+        <div class="story-copy">
+          <div>
+            <p class="eyebrow">Our philosophy</p>
+            <h2>Fewer pieces.<br /><em>More possibility.</em></h2>
+            <p>
+              We believe a wardrobe should be intentional, tactile and enduring. Every Élane piece
+              is designed to move between moments and seasons.
+            </p>
+            <a class="text-link" href="#">
+              Discover our story
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="values">
+        <article>
+          <span>01</span>
+          <h3>Natural materials</h3>
+          <p>Thoughtfully sourced linen, wool and silk.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Made with care</h3>
+          <p>Produced in small runs by trusted makers.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Designed to endure</h3>
+          <p>Timeless forms, finished for longevity.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-logo">ÉLANE</p>
+          <p class="footer-message">Notes on style, craft and the art of living well.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg>
+            </button>
+          </form>
+          <p class="form-message" id="formMessage"></p>
+        </div>
+        <div class="footer-links">
+          <h3>Customer care</h3>
+          <a href="#">Shipping & returns</a>
+          <a href="#">Size guide</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h3>Follow along</h3>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Journal</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Élane Studio</span>
+        <span>Privacy · Terms · Accessibility</span>
+      </div>
+    </footer>
+
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <span class="logo">ÉLANE</span>
+        <button class="icon-button" id="closeMenu" aria-label="Close menu">
+          <svg viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19" /></svg>
+        </button>
+      </div>
+      <nav>
+        <button data-mobile-shop>New arrivals</button>
+        <button data-mobile-category="Dresses">Women</button>
+        <button data-mobile-category="Tailoring">Tailoring</button>
+        <button data-mobile-story>Our story</button>
+      </nav>
+    </div>
+
+    <div class="cart-overlay hidden" id="cartOverlay">
+      <aside class="cart-drawer" aria-label="Shopping cart">
+        <div class="cart-header">
+          <h2>Your bag <span id="drawerCount">(0)</span></h2>
+          <button class="icon-button" id="closeCart" aria-label="Close cart">
+            <svg viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19" /></svg>
+          </button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer hidden" id="cartFooter">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <span id="subtotal">$0</span>
+          </div>
+          <p>Taxes and shipping calculated at checkout.</p>
+          <button class="checkout" id="checkoutButton">Checkout</button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="Client.js"></script>
+  </body>
+</html>
